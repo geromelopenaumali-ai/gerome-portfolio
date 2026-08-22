@@ -1419,7 +1419,6 @@ function Index() {
                     onClick={handleCopyEmail}
                     aria-label={emailCopied ? "Email copied" : "Copy email address"}
                   >
-                    copy email
                     <span className={`v-copy-icon${emailCopied ? " is-copied" : ""}`} aria-hidden="true">
                       {emailCopied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
                     </span>

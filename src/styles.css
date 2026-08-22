@@ -623,6 +623,7 @@ html.lenis.lenis-smooth [data-lenis-prevent] {
 /* tactile email / résumé buttons */
 .v-links { display: flex; flex-wrap: wrap; gap: 10px; perspective: 600px; }
 .v-link-btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border: 1px solid var(--v-line); border-bottom-color: var(--v-line); border-radius: 8px; background: var(--v-surface); box-shadow: none; transition: transform var(--duration-fast) var(--ease-out), color var(--duration-fast) ease, border-color var(--duration-fast) ease; }
+.v-copy-email { flex: 0 0 36px; width: 36px; height: 36px; min-height: 36px; padding: 0; justify-content: center; gap: 0; }
 .v-link-btn:hover, .v-link-btn:focus-visible { color: var(--v-link-hover); border-color: color-mix(in oklab, var(--v-accent) 45%, transparent); transform: translateY(-1px); box-shadow: none; }
 .v-link-btn span { transition: transform var(--duration-fast) ease, opacity var(--duration-fast) ease; }
 .v-link-btn:hover span { opacity: 1; transform: translate(2px, -2px); }
