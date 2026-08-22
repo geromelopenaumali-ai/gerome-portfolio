@@ -1,0 +1,136 @@
+62315: bento=1 other=4
+  /* Reference-inspired dimensional heading type: bright top edge, soft gray falloff,    and a quiet cinematic shadow. Static only—no shimmer or text animation. */ .v-note h1, .v-note h2, .wb2-bento-head h2
+62954: bento=4 other=0
+  /* Final cleanup: the What I Build title is static; neutralize remaining accent accents. */ .wb2-bento-title, .wb2-bento-title[data-sweep], .wb2-bento-title[data-sweep="out"], .wb2-bento-title[data-sweep="in"]
+63601: bento=1 other=2
+  .v-eyebrow, .v-prompt-path, .wb2-bento-card
+63690: bento=2 other=0
+  .wb2-bento-card:hover, .wb2-bento-card:focus-visible
+64213: bento=1 other=2
+  .v-note h1, .v-note h2, .wb2-bento-title
+64700: bento=3 other=0
+  .wb2-bento-title[data-sweep], .wb2-bento-title[data-sweep="out"], .wb2-bento-title[data-sweep="in"]
+64958: bento=2 other=1
+  /* Final behavior correction: hover may tilt the bento card, but its text must not expand. */ .wb2-bento-card:hover .wb2-bento-copy, .wb2-bento-card:focus-visible .wb2-bento-copy
+65172: bento=2 other=0
+  .wb2-bento-card:hover .wb2-capability-tags span, .wb2-bento-card:focus-visible .wb2-capability-tags span
+65311: bento=1 other=1
+  .wb2-bento-card:hover .wb2-bento-card:focus-visible /* Scroll state changes the pill geometry only; typography is identical. */ .v-top-nav .v-top-nav-links a, .v-top-nav.is-compact .v-top-nav-links a
+66641: bento=4 other=0
+  /* What I Build heading block is informational only: no hover expansion or motion. */ .wb2-bento-head, .wb2-bento-head:hover, .wb2-bento-head:focus, .wb2-bento-head:focus-within
+66909: bento=6 other=0
+  .wb2-bento-head h2, .wb2-bento-head h2:hover, .wb2-bento-head h2:focus, .wb2-bento-head .wb2-lede, .wb2-bento-head .wb2-lede:hover, .wb2-bento-head .wb2-lede:focus
+67344: bento=3 other=0
+  .wb2-bento-head .wb2-lede, .wb2-bento-head .wb2-lede:hover, .wb2-bento-head .wb2-lede:focus
+76018: bento=1 other=8
+  /* Legacy reveal targets are upgraded to the same master class by SmoothLayer. */ .v-hero, .v-featured-col, .v-featured-note, .v-contact, .v-contact-heading, .v-note-footer, .v-role, .v-tags, .wb2-bento-card
+77006: bento=1 other=7
+  /* Shared card hover: one restrained lift, border response, and shadow. No tilt, spotlight, or sibling dimming. */ .ab-panel, .ab-featured-project, .wb2-bento-card, .v-featured-window
+77989: bento=1 other=2
+  /* Bento: a compact numbered 4x2 list, equal rhythm at rest, quiet on hover. */ .wb2-bento-grid
+78210: bento=9 other=0
+  .wb2-bento-card, .wb2-bento-card--workflow, .wb2-bento-card--pipeline, .wb2-bento-card--agent, .wb2-bento-card--enrichment, .wb2-bento-card--onboarding, .wb2-bento-card--reporting, .wb2-bento-card--appointments, .wb2-bento-card--support
+78743: bento=2 other=1
+  .wb2-bento-card::before, .wb2-bento-card::after, .wb2-capability-top
+79012: bento=1 other=0
+  .wb2-bento-card .wb2-capability-icon
+79385: bento=1 other=0
+  .wb2-bento-card .wb2-capability-icon svg
+79482: bento=1 other=0
+  .wb2-bento-copy
+79541: bento=1 other=0
+  .wb2-bento-card h3
+79702: bento=1 other=0
+  .wb2-bento-card p
+79925: bento=1 other=0
+  .wb2-bento-bottom
+80088: bento=1 other=0
+  .wb2-bento-card .wb2-capability-tags span
+80746: bento=9 other=0
+  .wb2-bento-card,   .wb2-bento-card--workflow,   .wb2-bento-card--pipeline,   .wb2-bento-card--agent,   .wb2-bento-card--enrichment,   .wb2-bento-card--onboarding,   .wb2-bento-card--reporting,   .wb2-bento-card--appointments,   .wb2-bento-card--support
+86438: bento=2 other=9
+  .v-note h1, .v-hero-headline, .v-note h2, .v-section > h2, .v-featured-case-title, .v-contact h2, .wb2-bento-title, .wb2-bento-card h3, .ab-platform-name, .ab-headline, .v-role-title
+90038: bento=1 other=0
+  .wb2-bento-card--priority
+90241: bento=1 other=0
+  .wb2-bento-card--priority h3
+90324: bento=1 other=0
+  .wb2-bento-card--priority p
+90525: bento=1 other=0
+  .wb2-bento-card--priority
+91871: bento=1 other=1
+  /* Editorial capability hierarchy: three primary systems, then compact support. */ .wb2-bento-grid
+92094: bento=9 other=0
+  .wb2-bento-card, .wb2-bento-card--workflow, .wb2-bento-card--pipeline, .wb2-bento-card--agent, .wb2-bento-card--enrichment, .wb2-bento-card--onboarding, .wb2-bento-card--reporting, .wb2-bento-card--appointments, .wb2-bento-card--support
+92429: bento=1 other=0
+  .wb2-bento-card--priority
+92491: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4)
+92587: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-bento-copy
+92658: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) p
+92782: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-bento-bottom
+92856: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-capability-tags span
+92991: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-capability-tags span:not(:last-child)::after
+93138: bento=2 other=0
+  .wb2-bento-card:nth-child(7), .wb2-bento-card:nth-child(8)
+93346: bento=4 other=0
+  .wb2-bento-card,   .wb2-bento-card--priority,   .wb2-bento-card:nth-child(7),   .wb2-bento-card:nth-child(8)
+93606: bento=4 other=0
+  .wb2-bento-card,   .wb2-bento-card--priority,   .wb2-bento-card:nth-child(7),   .wb2-bento-card:nth-child(8)
+96746: bento=1 other=0
+  .wb2-bento-title
+97244: bento=1 other=0
+  .wb2-bento-title
+98399: bento=1 other=0
+  /* A clearer 3 + 3 + 2 capability rhythm. */ .wb2-bento-grid
+98567: bento=9 other=0
+  .wb2-bento-card, .wb2-bento-card--workflow, .wb2-bento-card--pipeline, .wb2-bento-card--agent, .wb2-bento-card--enrichment, .wb2-bento-card--onboarding, .wb2-bento-card--reporting, .wb2-bento-card--appointments, .wb2-bento-card--support
+98888: bento=1 other=0
+  .wb2-bento-card--priority
+98948: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4)
+99048: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-bento-copy
+99117: bento=1 other=0
+  .wb2-bento-card:nth-child(n+4) .wb2-bento-bottom
+99189: bento=1 other=1
+  /* Local interaction feedback: the card leads, then its mark follows. */ .wb2-bento-card .wb2-capability-icon
+99891: bento=1 other=0
+  .wb2-bento-card:hover h3
+100471: bento=1 other=3
+  .wb2-bento-card:focus-visible, .ab-panel:focus-within, .ab-featured-project:focus-within, .v-featured-window:focus-within
+101449: bento=1 other=0
+  .wb2-bento-grid
+101500: bento=3 other=0
+  .wb2-bento-card,   .wb2-bento-card--priority,   .wb2-bento-card:nth-child(n+4)
+108361: bento=1 other=0
+  .wb2-bento-title
+108493: bento=1 other=0
+  .wb2-bento-card h3
+111922: bento=1 other=0
+  .wb2-bento-card p
+113085: bento=1 other=3
+  .v-hero .v-quote, .v-featured-intro, .v-featured-body, .wb2-bento-head .wb2-lede
+124989: bento=1 other=5
+  /* Project and featured cards: one 4–6 px lift, brand border glow, and a    single sheen sweep using the existing --sheen token. */ .ab-panel, .ab-featured-project, .wb2-bento-card, .v-featured-window
+125451: bento=1 other=3
+  .ab-panel::after, .ab-featured-project::after, .wb2-bento-card::after, .v-featured-window::after
+126296: bento=2 other=6
+  .ab-panel:hover::after,   .ab-panel:focus-within::after,   .ab-featured-project:hover::after,   .ab-featured-project:focus-within::after,   .wb2-bento-card:hover::after,   .wb2-bento-card:focus-within::after,   .v-featured-window:hover::after,   .v-featured-wi
+130287: bento=2 other=9
+  .ab-panel:hover,   .ab-panel:focus-within,   .ab-featured-project:hover,   .ab-featured-project:focus-within,   .wb2-bento-card:hover,   .wb2-bento-card:focus-within,   .v-featured-window:hover,   .v-featured-window:focus-within,   .v-cta-primary.magnetic-targ
+130711: bento=1 other=4
+  .ab-panel::after,   .ab-featured-project::after,   .wb2-bento-card::after,   .v-featured-window::after,   .v-cta-primary::after
+210616: bento=3 other=1
+  /* Final interaction polish: visible neutral BentoGrid glow, no card scaling. */ .lightswind-bento-grid > .lightswind-bento-card:hover, .lightswind-bento-grid > .lightswind-bento-card:focus-within, .lightswind-bento-grid > .lightswind-bento-card:focus-visible
+211274: bento=3 other=0
+  .lightswind-bento-grid > .lightswind-bento-card:hover .lightswind-bento-card-overlay, .lightswind-bento-grid > .lightswind-bento-card:focus-within .lightswind-bento-card-overlay, .lightswind-bento-grid > .lightswind-bento-card:focus-visible .lightswind-bento-c
+212443: bento=1 other=0
+  /* Keep each BentoGrid row geometrically aligned to its tallest card. */ .lightswind-bento-grid.wb2-bento-grid
+212594: bento=1 other=0
+  .lightswind-bento-grid.wb2-bento-grid > .lightswind-bento-card
