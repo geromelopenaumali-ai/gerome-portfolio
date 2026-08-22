@@ -61,4 +61,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Vercel runs TanStack Start through Nitro Functions, not a Cloudflare Worker.
+  nitro: { preset: "vercel" },
 });
