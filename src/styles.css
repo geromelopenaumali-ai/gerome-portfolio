@@ -1679,6 +1679,7 @@ html.lenis.lenis-smooth [data-lenis-prevent] {
   width: 100%;
   overflow: hidden;
   isolation: isolate;
+  background: var(--v-base);
 }
 .blur-up-placeholder,
 .blur-up-picture {
@@ -1727,6 +1728,29 @@ html.lenis.lenis-smooth [data-lenis-prevent] {
   .blur-up-placeholder,
   .blur-up-picture {
     transition: none;
+  }
+}
+
+/* Touch browsers can produce fuzzy text when large blurred layers are composited over scaled images. */
+@media (hover: none) and (pointer: coarse) {
+  .blur-up-placeholder,
+  .blur-up-frame.is-loaded .blur-up-placeholder {
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+
+  .v-top-nav.is-compact .v-top-nav-inner,
+  .pd-modal,
+  [role="dialog"]:not(.v-lightbox),
+  .v-lightbox-frame,
+  .v-lightbox-tray,
+  .v-lightbox-close,
+  .v-lightbox-nav,
+  .v-calendly-shell {
+    background: color-mix(in oklab, var(--glass-bg-strong) 94%, var(--v-base)) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 }
 

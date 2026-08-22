@@ -32,13 +32,26 @@ export function BlurUpPicture({
   dataDir,
 }: BlurUpPictureProps) {
   const [loaded, setLoaded] = useState(false);
+  const [useFallbackSource, setUseFallbackSource] = useState(false);
+  const [placeholderFailed, setPlaceholderFailed] = useState(false);
   const fullImageRef = useRef<HTMLImageElement>(null);
-  const placeholder = placeholderAvif || placeholderWebp;
+  // WebP is the most broadly reliable optimized format across iPad and mobile Safari.
+  const placeholder = placeholderWebp || placeholderAvif;
 
   useEffect(() => {
+    setLoaded(false);
+    setUseFallbackSource(false);
+    setPlaceholderFailed(false);
     const image = fullImageRef.current;
     if (image?.complete && image.naturalWidth > 0) setLoaded(true);
-  }, [src]);
+  }, [src, avif, webp]);
+
+  const handleFullImageError = () => {
+    if (!useFallbackSource) {
+      setLoaded(false);
+      setUseFallbackSource(true);
+    }
+  };
 
   return (
     <span
@@ -46,16 +59,24 @@ export function BlurUpPicture({
       style={{ aspectRatio: `${width} / ${height}` }}
       data-dir={dataDir}
     >
-      {placeholder ? (
+      {placeholder && !placeholderFailed ? (
         <picture className="blur-up-placeholder" aria-hidden="true">
-          {placeholderAvif ? <source srcSet={placeholderAvif} type="image/avif" /> : null}
           {placeholderWebp ? <source srcSet={placeholderWebp} type="image/webp" /> : null}
-          <img src={placeholder} alt="" width={width} height={height} decoding="async" aria-hidden="true" />
+          {placeholderAvif ? <source srcSet={placeholderAvif} type="image/avif" /> : null}
+          <img
+            src={placeholder}
+            alt=""
+            width={width}
+            height={height}
+            decoding="async"
+            aria-hidden="true"
+            onError={() => setPlaceholderFailed(true)}
+          />
         </picture>
       ) : null}
       <picture className="blur-up-picture">
-        {avif ? <source srcSet={avif} type="image/avif" /> : null}
-        {webp ? <source srcSet={webp} type="image/webp" /> : null}
+        {!useFallbackSource && webp ? <source srcSet={webp} type="image/webp" /> : null}
+        {!useFallbackSource && avif ? <source srcSet={avif} type="image/avif" /> : null}
         <img
           ref={fullImageRef}
           src={src}
@@ -66,6 +87,7 @@ export function BlurUpPicture({
           decoding={decoding}
           draggable={draggable}
           onLoad={() => setLoaded(true)}
+          onError={handleFullImageError}
         />
       </picture>
     </span>
