@@ -62,5 +62,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // Vercel runs TanStack Start through Nitro Functions, not a Cloudflare Worker.
-  nitro: { preset: "vercel" },
+  nitro: {
+    preset: "vercel",
+    rollupConfig: { output: { inlineDynamicImports: true } },
+  } as any,
 });
