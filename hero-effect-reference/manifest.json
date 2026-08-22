@@ -1,0 +1,27 @@
+{
+  "source": "/home/ubuntu/upload/pasted_file_yQjQ3u_image.png",
+  "pixel_width": 61,
+  "pixel_height": 301,
+  "aspect_ratio": "61:301",
+  "aspect_ratio_decimal_width_over_height": 0.202658,
+  "orientation": "portrait",
+  "tiled": true,
+  "mode": "vertical",
+  "overlap_fraction_requested_target": 0.12,
+  "overlap_fraction_actual_minimum": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "reading_order": "top-to-bottom",
+  "tile_count": 1,
+  "tiles": [
+    {
+      "index": 1,
+      "path": "/home/ubuntu/audit_project/gerome-umali-portfolio/hero-effect-reference/tile_001_x000000_y000000.png",
+      "x": 0,
+      "y": 0,
+      "pixel_width": 61,
+      "pixel_height": 301
+    }
+  ]
+}
