@@ -1433,7 +1433,17 @@ function Index() {
                   >
                     résumé <span aria-hidden="true">↓</span>
                   </a>
+                  <a
+                    className="v-link v-link-btn"
+                    href="https://www.linkedin.com/in/gerome-umali/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Gerome Umali on LinkedIn"
+                  >
+                    linkedin <span aria-hidden="true">↗</span>
+                  </a>
                 </div>
+
               </div>
               <div className="v-calendly-shell">
                 <div className="v-calendly-intro">
