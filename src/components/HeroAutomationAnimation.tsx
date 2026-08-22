@@ -104,7 +104,7 @@ function PanelNodeCard({
       aria-label={`${item.title}: ${item.description}`}
     >
       <title>{item.title}: {item.description}</title>
-      <rect width={width} height="62" rx="4" />
+      <rect width={width} height="62" rx="4" fill="#090b0d" fillOpacity=".96" />
       <Icon
         className="v-panel-card-icon"
         x={iconX - 9}
@@ -115,9 +115,9 @@ function PanelNodeCard({
         aria-hidden="true"
         focusable="false"
       />
-      <text className="v-panel-card-title" x={textX} y="26">{item.title}</text>
-      <text className="v-panel-card-detail" x={textX} y="45">{item.detail}</text>
-      <text className="v-panel-card-status-text" x={textX} y="45">STATUS // {item.status}</text>
+      <text className="v-panel-card-title" x={textX} y="26" fill="#f2f5f5">{item.title}</text>
+      <text className="v-panel-card-detail" x={textX} y="45" fill="#e3ebec">{item.detail}</text>
+      <text className="v-panel-card-status-text" x={textX} y="45" fill="#e2f3f4">STATUS // {item.status}</text>
     </g>
   );
 }

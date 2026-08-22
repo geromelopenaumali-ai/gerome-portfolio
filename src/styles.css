@@ -11185,3 +11185,131 @@ body { overflow-x: hidden; }
     margin-bottom: 12px;
   }
 }
+
+
+/* Touch-safe hero rendering: give tablet browsers a readable single-column panel and keep SVG text crisp. */
+@media (max-width: 1100px) {
+  .v-hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: clamp(34px, 6vw, 56px) !important;
+  }
+
+  .v-hero > :first-child {
+    min-width: 0 !important;
+    max-width: 760px;
+  }
+
+  .v-automation-reference-figure {
+    width: 100%;
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .v-automation-animated-visual {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .v-automation-animated-svg {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@media (max-width: 620px) {
+  .v-hero {
+    row-gap: 32px !important;
+  }
+
+  .v-automation-reference-figure {
+    max-width: 100%;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .v-automation-animated-svg {
+    shape-rendering: auto;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v-automation-animated-svg {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* End touch-safe hero rendering. */
+
+/* Explicit touch-safe SVG surfaces: prevents iOS from exposing default white card fills during compositing. */
+.v-automation-animated-svg .v-panel-card rect {
+  fill: #090b0d;
+  fill-opacity: .96;
+}
+
+.v-automation-animated-svg .v-panel-card-title {
+  fill: #f2f5f5;
+}
+
+.v-automation-animated-svg .v-panel-card-detail {
+  fill: #e3ebec;
+}
+
+.v-automation-animated-svg .v-panel-card-status-text {
+  fill: #e2f3f4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .v-automation-animated-svg .v-panel-card:hover rect,
+  .v-automation-animated-svg .v-panel-card:focus-visible rect {
+    fill: #181d1f;
+    fill-opacity: .98;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v-automation-animated-svg .v-panel-card:hover rect,
+  .v-automation-animated-svg .v-panel-card:focus-visible rect {
+    fill: #090b0d;
+    fill-opacity: .96;
+  }
+}
+
+/* End explicit touch-safe SVG surfaces. */
+
+/* Keep the touch gallery inside its viewport while preserving its swipe and controls. */
+@media (max-width: 620px) {
+  .wb2-gallery {
+    width: 100% !important;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .wb2-gallery > div:first-child {
+    width: min(390px, calc(100vw - 36px)) !important;
+    height: min(430px, calc((100vw - 36px) * 1.1026)) !important;
+  }
+
+  .wb2-gallery > div:first-child > div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* End touch gallery containment. */
+
+/* Phone navigation: the drawer control replaces the desktop link row below 900px. */
+@media (max-width: 900px) {
+  .v-top-nav {
+    display: none !important;
+  }
+
+  .v-mobile-menu {
+    top: max(10px, env(safe-area-inset-top));
+    left: max(10px, env(safe-area-inset-left));
+  }
+}
+
+/* End phone navigation. */
